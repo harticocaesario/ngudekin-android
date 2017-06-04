@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\Android Project\\NgudekIn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_action_name.png",
+        "source": "D:\\Android Project\\NgudekIn\\app\\src\\main\\res\\drawable-mdpi\\ic_action_name.png"
+    },
+    {
+        "merged": "D:\\Android Project\\NgudekIn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_search.png",
+        "source": "D:\\Android Project\\NgudekIn\\app\\src\\main\\res\\drawable-mdpi\\ic_search.png"
+    }
+]
