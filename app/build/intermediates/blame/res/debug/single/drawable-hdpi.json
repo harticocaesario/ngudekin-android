@@ -4,6 +4,10 @@
         "source": "D:\\Android Project\\NgudekIn\\app\\src\\main\\res\\drawable-hdpi\\ic_search.png"
     },
     {
+        "merged": "D:\\Android Project\\NgudekIn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_arrow_back_white_24dp.png",
+        "source": "D:\\Android Project\\NgudekIn\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_arrow_back_white_24dp.png"
+    },
+    {
         "merged": "D:\\Android Project\\NgudekIn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_name.png",
         "source": "D:\\Android Project\\NgudekIn\\app\\src\\main\\res\\drawable-hdpi\\ic_action_name.png"
     }

@@ -104,12 +104,12 @@
         "source": "C:\\Users\\Reyhan\\.android\\build-cache\\2c833e4a8acd45e08af9121e5d375e9ea5e91567\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "D:\\Android Project\\NgudekIn\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "C:\\Users\\Reyhan\\.android\\build-cache\\2c833e4a8acd45e08af9121e5d375e9ea5e91567\\output\\res\\drawable\\abc_btn_borderless_material.xml"
-    },
-    {
         "merged": "D:\\Android Project\\NgudekIn\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "C:\\Users\\Reyhan\\.android\\build-cache\\2c833e4a8acd45e08af9121e5d375e9ea5e91567\\output\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "D:\\Android Project\\NgudekIn\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\Reyhan\\.android\\build-cache\\2c833e4a8acd45e08af9121e5d375e9ea5e91567\\output\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
         "merged": "D:\\Android Project\\NgudekIn\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",

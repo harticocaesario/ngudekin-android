@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\Android Project\\NgudekIn\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_photoviewer.xml",
+        "source": "D:\\Android Project\\NgudekIn\\app\\src\\main\\res\\menu\\menu_photoviewer.xml"
+    },
+    {
         "merged": "D:\\Android Project\\NgudekIn\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
         "source": "D:\\Android Project\\NgudekIn\\app\\src\\main\\res\\menu\\menu_main.xml"
     }

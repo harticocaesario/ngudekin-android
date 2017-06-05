@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -42,15 +44,20 @@ public class SearchResultActivity extends AppCompatActivity {
     Button tombol;
     CheckBox food;
     CheckBox drink;
+    LinearLayout loadingLayout;
+
     Intent myIntent;
     String checkedCategory = "";
     String query ="";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_result);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycleview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        loadingLayout = (LinearLayout) findViewById(R.id.loading_layout);
 
         recipeList = new ArrayList<>();
         recipeList.clear();
@@ -77,6 +84,8 @@ public class SearchResultActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 checkedCategory = "";
+                loadingLayout.setVisibility(View.VISIBLE);
+                mRecyclerView.setVisibility(View.GONE);
 
                 if(food.isChecked()&& drink.isChecked()){
                     checkedCategory = "semua";
@@ -138,15 +147,19 @@ public class SearchResultActivity extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(),
                                         "Tidak ada hasil",
                                         Toast.LENGTH_SHORT).show();
-
                             }
-                            //txtResponse.setText(jsonResponse);
+
+                            loadingLayout.setVisibility(View.GONE);
+                            mRecyclerView.setVisibility(View.VISIBLE);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
                             Toast.makeText(getApplicationContext(),
                                     "Error: " + e.getMessage(),
                                     Toast.LENGTH_LONG).show();
+                            loadingLayout.setVisibility(View.GONE);
+                            mRecyclerView.setVisibility(View.VISIBLE);
+
                         }
 
                         adapter.notifyDataSetChanged();
@@ -156,12 +169,15 @@ public class SearchResultActivity extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 VolleyLog.d(TAG, "Error: " + error.getMessage());
                 Toast.makeText(getApplicationContext(),
-                        "Error", Toast.LENGTH_SHORT).show();
+                        "Connection error", Toast.LENGTH_SHORT).show();
+                loadingLayout.setVisibility(View.GONE);
+                mRecyclerView.setVisibility(View.VISIBLE);
             }
         });
 
         // Adding request to request queue
         AppController.getInstance().addToRequestQueue(req);
+
     }
 
     @Override
@@ -177,6 +193,17 @@ public class SearchResultActivity extends AppCompatActivity {
         query = query.replaceAll(",",",%20");
         query = query.replaceAll(" ","%20");
         return query;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }

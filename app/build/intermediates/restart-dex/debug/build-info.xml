@@ -6,30 +6,30 @@
     density="xhdpi"
     format="10"
     plugin-version="2.3.2"
-    timestamp="1496593536250"
+    timestamp="1496667069212"
     token="-6203963121890483125"
     verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="281" />
+        duration="0" />
     <task
         name="instant-run-dex"
-        duration="14" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="27" />
+        duration="0" />
     <task
         name="verifier"
-        duration="2" />
+        duration="0" />
 
     <artifact
-        location="D:\Android Project\NgudekIn\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="D:\Android Project\NgudekIn\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
 
     <build
         build-mode="FULL"
-        timestamp="1496567336802"
+        timestamp="1496666594784"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
@@ -38,45 +38,31 @@
             location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
+            location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
             location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
             location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
             location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
             location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\outputs\apk\app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1496588514856"
-        verifier="FIELD_TYPE_CHANGE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
             location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\Android Project\NgudekIn\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="D:\Android Project\NgudekIn\app\build\outputs\apk\app-debug.apk"
@@ -84,331 +70,59 @@
     </build>
     <build
         build-mode="HOT_WARM"
-        timestamp="1496588642342"
+        timestamp="1496666635745"
         verifier="COMPATIBLE" >
         <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496588642342\classes.dex"
+            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496666635745\classes.dex"
             type="RELOAD_DEX" />
     </build>
     <build
         build-mode="HOT_WARM"
-        timestamp="1496588802323"
+        timestamp="1496666692767"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496666692767\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1496666847997"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496666847997\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1496666913226"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496666913226\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1496666971448"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496666971448\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1496667007082"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496667007082\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1496667069212"
         verifier="COMPATIBLE" >
         <artifact
             location="D:\Android Project\NgudekIn\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
             type="RESOURCES" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496589968935"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496589968935\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496590025879"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496590025879\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496590270049"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496590270049\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496590996821"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496590996821\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591059026"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591059026\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591124711"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591124711\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591177988"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591177988\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591211523"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591211523\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591263961"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591263961\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591513203"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591513203\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591557336"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591557336\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591572539"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591572539\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591678159"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591678159\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591691764"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591691764\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591719160"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591719160\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591731227"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591731227\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591746204"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591746204\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591751003"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591751003\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591814167"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591814167\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591856159"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591856159\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496591939497"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496591939497\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496592025265"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496592025265\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496592658450"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496592658450\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496592677186"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496592677186\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496592741001"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496592741001\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496592764298"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496592764298\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496592790317"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496592790317\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496592806542"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496592806542\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496592836393"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496592836393\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496592848020"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496592848020\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496592871453"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496592871453\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496592885414"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496592885414\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496592968732"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496592968732\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496593015866"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496593015866\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496593168223"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496593168223\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496593180058"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496593180058\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496593204194"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496593204194\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496593523970"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\builds\debug\1496593523970\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1496593536250"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android Project\NgudekIn\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -35,6 +38,8 @@ public class RecipeDetailActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_detail);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         Intent intent = getIntent();
         title = intent.getStringExtra("judul");
         imgSrc = intent.getStringExtra("thumbnail");
@@ -55,6 +60,16 @@ public class RecipeDetailActivity extends AppCompatActivity{
 
         titleView.setText(title);
         thumbnailImage.setImageUrl(imgSrc,imageLoader);
+        thumbnailImage.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        thumbnailImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(getApplicationContext(), PhotoViewerActivity.class);
+                myIntent.putExtra("imgSrc", imgSrc);
+                startActivity(myIntent);
+            }
+        });
+
         createPerPoints(ingredientsView, ingredients);
         createPerPoints(stepsView, steps);
         sourceView.setText(source);
@@ -63,7 +78,6 @@ public class RecipeDetailActivity extends AppCompatActivity{
     public void onDestroy() {
 
         super.onDestroy();
-        Intent myIntent = new Intent(getApplicationContext(), SearchResultActivity.class);
         finish();
 
     }
@@ -93,5 +107,16 @@ public class RecipeDetailActivity extends AppCompatActivity{
         }
 
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
