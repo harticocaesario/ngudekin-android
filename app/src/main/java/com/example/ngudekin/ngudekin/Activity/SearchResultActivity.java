@@ -5,12 +5,16 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -41,6 +45,7 @@ public class SearchResultActivity extends AppCompatActivity {
     private List<Recipe> recipeList;
     private static String TAG = SearchResultActivity.class.getSimpleName();
     private final String urlJsonArray= "http://mosqcode.net/ngudek/search/";
+    EditText searchInput;
     Button tombol;
     CheckBox food;
     CheckBox drink;
@@ -66,7 +71,7 @@ public class SearchResultActivity extends AppCompatActivity {
         checkedCategory = intent.getStringExtra("cekbox");
         query = intent.getStringExtra("isi");
 
-        final EditText searchInput =  (EditText) findViewById(R.id.searchInput);
+        searchInput =  (EditText) findViewById(R.id.searchInput);
         tombol = (Button) findViewById(R.id.search_button);
         searchInput.setText(query);
 
@@ -83,33 +88,52 @@ public class SearchResultActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                checkedCategory = "";
-                loadingLayout.setVisibility(View.VISIBLE);
-                mRecyclerView.setVisibility(View.GONE);
-
-                if(food.isChecked()&& drink.isChecked()){
-                    checkedCategory = "semua";
-                } else if(food.isChecked()){
-                    checkedCategory = food.getText().toString();
-                } else if(drink.isChecked()){
-                    checkedCategory = drink.getText().toString();
-                }
-
-                if(checkedCategory.equals("")){
-                    Toast.makeText(getApplicationContext(),
-                        "Pilih Kategori",
-                        Toast.LENGTH_SHORT).show();
-                } else {
-
-                    query = searchInput.getText().toString();
-                    recipeList.clear();
-
-                    makeJsonArrayRequest();
-                }
+                performSearch();
 
             }
         });
 
+        searchInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+
+                    searchInput.clearFocus();
+                    query = v.getText().toString();
+                    performSearch();
+
+                    return true;
+                }
+                return false;
+            }
+        });
+
+    }
+
+    private void performSearch() {
+        checkedCategory = "";
+        loadingLayout.setVisibility(View.VISIBLE);
+        mRecyclerView.setVisibility(View.GONE);
+
+        if(food.isChecked()&& drink.isChecked()){
+            checkedCategory = "semua";
+        } else if(food.isChecked()){
+            checkedCategory = food.getText().toString();
+        } else if(drink.isChecked()){
+            checkedCategory = drink.getText().toString();
+        }
+
+        if(checkedCategory.equals("")){
+            Toast.makeText(getApplicationContext(),
+                    "Pilih Kategori",
+                    Toast.LENGTH_SHORT).show();
+        } else {
+
+            query = searchInput.getText().toString();
+            recipeList.clear();
+
+            makeJsonArrayRequest();
+        }
     }
 
     @Override
@@ -189,9 +213,9 @@ public class SearchResultActivity extends AppCompatActivity {
     }
 
     private String trimComma(String query) {
-        query = query.replaceAll(", ",",%20");
-        query = query.replaceAll(",",",%20");
-        query = query.replaceAll(" ","%20");
+        query = query.replaceAll(", *",",%20");
+        query = query.replaceAll(" *","");
+        Log.d("anjas",query);
         return query;
     }
 

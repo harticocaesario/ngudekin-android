@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
@@ -15,25 +14,29 @@ import com.android.volley.toolbox.NetworkImageView;
 import com.example.ngudekin.ngudekin.CustomVolleyRequest;
 import com.example.ngudekin.ngudekin.R;
 
+import uk.co.senab.photoview.PhotoViewAttacher;
+
+
 public class PhotoViewerActivity extends AppCompatActivity {
 
     Toolbar customToolbar;
     NetworkImageView image;
-    boolean fullScreen;
+    PhotoViewAttacher photoViewAttacher;
+    boolean showBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo_viewer);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        fullScreen = true;
+        showBack = false;
 
         Intent intent = getIntent();
         String imgSrc = intent.getStringExtra("imgSrc");
 
         image = (NetworkImageView) findViewById(R.id.image);
+
         customToolbar = (Toolbar) findViewById(R.id.custom_toolbar);
-        customToolbar.animate().alpha(0).start();
 
         setTitle("");
         setSupportActionBar(customToolbar);
@@ -48,18 +51,17 @@ public class PhotoViewerActivity extends AppCompatActivity {
         imageLoader.get(imgSrc, com.android.volley.toolbox.ImageLoader.getImageListener(image, R.mipmap.ic_launcher, android.R.drawable.ic_dialog_alert));
 
         image.setImageUrl(imgSrc,imageLoader);
-        image.setScaleType(ImageView.ScaleType.FIT_CENTER);
-        image.setOnClickListener(new View.OnClickListener() {
+        image.setScaleType(ImageView.ScaleType.CENTER);
+        photoViewAttacher = new PhotoViewAttacher(image);
+        photoViewAttacher.setOnViewTapListener(new PhotoViewAttacher.OnViewTapListener() {
             @Override
-            public void onClick(View view) {
-                if (!fullScreen) {
-                    //getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            public void onViewTap(View view, float v, float v1) {
+                if (!showBack) {
                     customToolbar.animate().alpha(0).start();
-                    fullScreen = true;
+                    showBack = true;
                 } else {
-                    //getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
                     customToolbar.animate().alpha(1).start();
-                    fullScreen = false;
+                    showBack = false;
                 }
             }
         });
